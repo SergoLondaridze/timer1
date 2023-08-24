@@ -1,7 +1,7 @@
 "use strict";
 
 window.addEventListener("DOMContentLoaded", () => {
-  const deadline = "2023-10-10";
+  const deadline = "2023-12-10";
 
   function getTimeRemaining(endTime) {
     let t = Date.parse(endTime) - Date.parse(new Date());
@@ -38,10 +38,10 @@ window.addEventListener("DOMContentLoaded", () => {
     function updateClock() {
       const t = getTimeRemaining(endtime);
 
-      days.innerHTML = getZero(t.days);
-      hour.innerHTML = getZero(t.hours);
-      minutes.innerHTML = getZero(t.minutes);
-      seconds.innerHTML = getZero(t.seconds);
+      days.innerHTML = "Days : " + getZero(t.days);
+      hour.innerHTML = "Hours : " + getZero(t.hours);
+      minutes.innerHTML = "Minutes : " + getZero(t.minutes);
+      seconds.innerHTML = "Seconds : " + getZero(t.seconds);
 
       if (t.total <= 0) {
         clearInterval(timeInterval);
